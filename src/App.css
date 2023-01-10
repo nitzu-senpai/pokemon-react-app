@@ -1,0 +1,19 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card{
+  display: grid;
+  justify-items: center;
+  background-color: aliceblue;
+  color:rgb(29, 27, 27);
+  border-radius:20px;
+  width: 350px;
+}
+.card>img{
+  width: 90%;
+  padding-top: 15px;
+  border-radius: 48%;
+}
