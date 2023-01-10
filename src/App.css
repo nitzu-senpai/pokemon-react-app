@@ -5,15 +5,46 @@
 }
 
 .card{
-  display: grid;
-  justify-items: center;
-  background-color: aliceblue;
+  background-color: rgb(233, 228, 210);
   color:rgb(29, 27, 27);
   border-radius:20px;
-  width: 350px;
+  text-align: center;
+
 }
 .card>img{
-  width: 90%;
-  padding-top: 15px;
-  border-radius: 48%;
+  margin: auto;
+  width: 250px;
+  height: 220px;
+  padding: 15px;
+  object-fit: contain;
+  /* border-radius: 30%; */
+}
+.card>div{
+  font-family:"Consolas";
+  text-transform: capitalize;
+  font-size: 30px;
+  padding: 12px;
+}
+.all_pokemons{
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  gap:1%;
+}
+.pages{
+display: flex;
+justify-content: center;
+align-items: baseline;
+align-self: start;
+grid-column-start: -5;
+grid-column-end: -1;
+position: sticky;
+bottom: 0;
+background-color: aliceblue;
+color: #242424;
+padding-top: 8px;
+padding-bottom: 8px;
+}
+.pages>div,button{
+  margin-left: 40px;
+  
 }
