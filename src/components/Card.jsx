@@ -1,8 +1,12 @@
 import React from "react";
-
-const Card = ({ img, name}) => {
+import { useNavigate } from "react-router-dom";
+const Card = ({ img, name,id}) => {
+  let history = useNavigate()
+  // const ShowPokemon=()=>{
+  //   history.push()
+  // }
   return (
-    <div className="card">
+    <div className="card" onClick={()=>{history("/pokemon/"+id)}}>
       <img src={img} alt="image" />
       <div>{name}</div>
     </div>
