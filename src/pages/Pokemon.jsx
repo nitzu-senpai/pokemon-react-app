@@ -1,6 +1,7 @@
 import React from "react";
+import { useMemo } from "react";
 import { useEffect, useContext, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate,Link } from "react-router-dom";
 import { FavouriteContext } from "../contexts/UserContext";
 import "../Pokemon.css";
 const Pokemon = () => {
@@ -12,7 +13,7 @@ const Pokemon = () => {
   const [img, setImg] = useState();
   const [abilities, setAbilities] = useState();
   const [types, setTypes] = useState();
-  const getPokemonDetails = async () => {
+  const getPokemonDetails = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
     setData(data);
@@ -21,13 +22,30 @@ const Pokemon = () => {
     setAbilities(data.abilities);
     console.log([...favlist].filter((i) => i.id === data.id).length === 0);
   };
+  const memoTest = useMemo(()=>getPokemonDetails(url),[url])
   useEffect(() => {
-    getPokemonDetails();
-  }, []);
+   memoTest
+  }, [id]);
 
   return (
     <>
-      <div></div>
+    <div style={{marginTop:"30px",justifySelf:"center"}}>
+    {id>1&&<Link to={"/pokemon/"+(parseInt(id)-1)}><button>
+        
+        previous pokemon
+     
+    </button>
+    </Link>
+    }
+    <Link to={"/pokemon/"+(parseInt(id)+1)}>
+      <button>
+    
+          next pokemon
+        
+      </button>
+      </Link>
+     
+      </div>
       {data && (
         <div className="pokemon-details">
           <img src={img} alt="" />
