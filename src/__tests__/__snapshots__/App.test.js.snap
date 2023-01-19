@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays the card according to props 1`] = `
+<div
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "gray",
+      "borderRadius": "20px",
+      "display": "flex",
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "margin": "10px",
+      "padding": "20px",
+      "width": "20%",
+    }
+  }
+>
+  <div
+    style={
+      {
+        "fontSize": "55px",
+        "height": "50px",
+        "marginTop": "23px",
+      }
+    }
+  />
+  <hr />
+  <img
+    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/undefined.png"
+    width="100%"
+  />
+  <hr />
+  <div
+    style={
+      {
+        "fontSize": "25px",
+      }
+    }
+  >
+    Base Experience :
+  </div>
+</div>
+`;

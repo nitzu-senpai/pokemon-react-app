@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import FavPoke from '../components/FavPoke'
-import { FavouriteContext } from '../contexts/UserContext'
+import  FavouriteContext from '../contexts/UserContext'
 const Profile = () => {
   const[favList]=useContext(FavouriteContext)
   return (

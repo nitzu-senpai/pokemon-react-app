@@ -5,23 +5,12 @@ import Home from "./pages/Home";
 import Pokemon from "./pages/Pokemon";
 import Profile from "./pages/Profile";
 import { BrowserRouter } from "react-router-dom";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { FavouriteContext } from "./contexts/UserContext";
+import Header from "./components/Header";
 function App() {
- const[favList]=useContext(FavouriteContext)
- console.log(favList);
   return (
     <div className="App">
       <BrowserRouter>
-        <div className="nav">
-          <h2>Pokémon !</h2>
-          <Link to="/">Home</Link>
-          <Link to="/profile">Profile</Link>
-          <div>
-          Favourite Pokémons = {favList.size}
-          </div>
-        </div>
+      <Header/>
 
         <Routes>
           <Route path="/" element={<Home />} />
